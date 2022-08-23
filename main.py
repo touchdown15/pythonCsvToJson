@@ -19,11 +19,11 @@ reader = csv.DictReader(csvfile, delimiter=';')
 for row in reader:
     if lastColumn != row['Column1']:
         filename = f'C:\\Trabalho\\Arquivos\\{lastColumn + ".pt"}.json'
-        jsonfilePT = open(filename, 'w')
+        jsonfilePT = open(filename, 'w', encoding='utf-8')
         filename = f'C:\\Trabalho\\Arquivos\\{lastColumn + ".en"}.json'
-        jsonfileEN = open(filename, 'w')
+        jsonfileEN = open(filename, 'w', encoding='utf-8')
         filename = f'C:\\Trabalho\\Arquivos\\{lastColumn + ".es"}.json'
-        jsonfileES = open(filename, 'w')
+        jsonfileES = open(filename, 'w', encoding='utf-8')
 
         lastColumn = row['Column1']
 
